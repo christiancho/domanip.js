@@ -2,7 +2,7 @@
 
 A lightweight DOM manipulation library inspired by jQuery.
 
-["See it in action"](http://christiancho.tech/domanipjs)
+["See it in action"](http://christiancho.tech/domanip.js)
 
 ## Getting Started
 
