@@ -15,7 +15,7 @@
     <ul class="header-buttons">
       <li onclick="addBullet()">Add Bullet</li>
       <li onclick="clearBullets()">Clear Bullets</li>
-      <li onclick="colorizeColor()">Colorize Grid</li>
+      <li onclick="colorizeGrid()">Colorize Grid</li>
       <li onclick="randomGif()">Fetch Random GIF</li>
     </ul>
 </header>
@@ -57,9 +57,8 @@
     <li></li>
   </ul>
 
-  <div class="giphy-box">
-    <img onload="randomGif()">
-    <span class="fetching"></span>
+  <div class="giphy-box unloaded">
+    <img>
   </div>
 
 </main>

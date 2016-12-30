@@ -10,3 +10,12 @@
   display: block;
   width: 100%;
 }
+
+.unloaded {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.unloaded:after {
+  content: "I don't have anything yet. Give me a random GIF!";
+}

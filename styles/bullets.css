@@ -9,9 +9,8 @@
 
 .bullets {
   list-style: inside circle;
-
 }
 
-.bullets > li {
-
+.bullets > li:after {
+  content: "This is a bullet item!";
 }
