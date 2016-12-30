@@ -1,0 +1,12 @@
+.giphy-box {
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #111;
+  overflow: hidden;
+  width: 300px;
+}
+
+.giphy-box > img {
+  display: block;
+  width: 100%;
+}

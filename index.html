@@ -3,23 +3,70 @@
   <head>
     <meta charset="utf-8">
     <title>Domanip.js Playground</title>
-    <link rel="stylesheet" href="lib/style.css">
-    <script src="lib/domanip.js"></script>
-    <script src="lib/test_functions.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/domanip.js"></script>
+    <script src="scripts/test_functions.js"></script>
   </head>
   <body>
 
 <header>
   <h1>Domanip.js Playground</h1>
+    <ul class="header-buttons">
+      <li onclick="addBullet()">Add Bullet</li>
+      <li onclick="clearBullets()">Clear Bullets</li>
+      <li onclick="colorizeColor()">Colorize Grid</li>
+      <li onclick="randomGif()">Fetch Random GIF</li>
+    </ul>
 </header>
-<aside>
-  <h2>Hover over the buttons to see the code below.</h2>
-</aside>
 <main>
+
+  <div class="bullets-wrapper">
+    <ul class="bullets">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <ul class="grid">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <div class="giphy-box">
+    <img onload="randomGif()">
+    <span class="fetching"></span>
+  </div>
+
 </main>
 <footer>
   <ul class="footer-links">
-    <li></li>
+    <li><a href="https://github.com/christiancho/domanip.js" target="_blank">Source Code</a></li>
+    <li><a href="http://christiancho.tech" target="_blank">Portfolio</a></li>
   </ul>
 </footer>
 

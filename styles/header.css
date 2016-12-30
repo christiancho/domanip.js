@@ -1,0 +1,22 @@
+h1 {
+  font-size: 2rem;
+}
+
+.header-buttons > li {
+  background-color: #2e36d1;
+  border-radius: 3px;
+  color: #eee;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  transition: 0.25s;
+}
+
+.header-buttons > li:hover {
+  background-color: #35c470;
+}
+
+.header-buttons > li:first-child {
+  margin-left: 0px;
+}

@@ -1,0 +1,36 @@
+body {
+  background-color: #EFEFEF;
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+}
+
+body > * {
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  top: 0;
+  height: 100px;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 100px;
+  bottom: 50px;
+  overflow-y: scroll;
+}
+
+footer {
+  bottom: 0;
+  height: 50px;
+}
