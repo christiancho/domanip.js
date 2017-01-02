@@ -74,27 +74,29 @@
 
 	$l.ajax = function (options) {
 
-	  const defaults = {
-	    method: 'get',
-	    url: '',
-	    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-	    data: {},
-	    success: () => {},
-	    error: () => {},
-	    dataType: 'jsonp'
-	  };
-	  $l.extend(defaults, options);
+	  return new Promise( (success, error) => {
+	    const defaults = {
+	      method: 'get',
+	      url: '',
+	      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+	      data: {},
+	      success: () => {},
+	      error: () => {},
+	      dataType: 'jsonp'
+	    };
+	    $l.extend(defaults, options);
 
-	  const xhr = new XMLHttpRequest();
-	  xhr.open(defaults.method, defaults.url);
-	  xhr.onload = function() {
-	    if (xhr.status >= 200 && xhr.status < 300) {
-	      defaults.success(xhr.response);
-	    } else {
-	      defaults.error(xhr.response);
-	    }
-	  };
-	  xhr.send(JSON.stringify(defaults.data));
+	    const xhr = new XMLHttpRequest();
+	    xhr.open(defaults.method, defaults.url);
+	    xhr.onload = function() {
+	      if (xhr.status >= 200 && xhr.status < 300) {
+	        defaults.success(xhr.response);
+	      } else {
+	        defaults.error(xhr.response);
+	      }
+	    };
+	    xhr.send(JSON.stringify(defaults.data));
+	  });
 	};
 
 	window.$l = $l;
@@ -149,6 +151,14 @@
 	      return this.elements[0].getAttribute(attribute);
 	    } else {
 	      this.each( el => el.setAttribute(attribute, value) );
+	    }
+	  }
+
+	  css(cssKey, value) {
+	    if (value === undefined){
+	      return this.elements[0].style[cssKey];
+	    } else {
+	      this.each( el => el.style[cssKey] = value );
 	    }
 	  }
 
