@@ -8,7 +8,7 @@ function randomGif(){
   $l.ajax({
     url: 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg',
     success: (result) => changeGif(result)
-  });
+  }).then(console.log("AJAX call successful."));
 }
 
 function addBullet(){

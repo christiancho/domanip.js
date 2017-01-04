@@ -8,7 +8,18 @@ A lightweight DOM manipulation library inspired by jQuery.
 
 Download `scripts/domanip.js` and include it in your HTML files. Alternatively, download the original files `lib/dom_node_collection.js` and `lib/main.js` and use `webpack` to compile the files. The file will be successfully loaded if the console in the browser reads `DOM content loaded!`. You can remove this output on line 58 of `lib/main.js`.
 
-### Basic Structure
+### Loading Demo
+
+Functions used in the [live demo](http://christiancho.tech/domanip.js) are stored in `scripts/test_functions.js`. Use the buttons at the top of the screen to test the various functions. To write your own functions using Domanip.js functions, do the following:
+
+1. Add your functions to `scripts/test_functions.js`.
+2. Create buttons in `index.html` and add event listeners to the buttons.
+3. Open `index.html` or use `http-server` by following the next steps:
+4. Install `http-server` by running `npm install -g http-server` in the console.
+5. Run `http-server`.
+6. Open your browser and navigate to `localhost:8080`.
+
+## Basic Structure
 
 The core class of Domanip.js is `DOMNodeCollection`. It contains an array of all DOM elements and its functions use the class' `each` function to call the function on each DOM element. As an example:
 
@@ -24,7 +35,7 @@ attr(attribute, value) {
 
 ### DOM Selection
 
-The function `$l` is the selector. You can select DOM elements by their class, ids, or HTML element type. The result will be an array.
+The function `$l` is the selector. You can select DOM elements by their class, ids, or HTML element type. The result is a `DOMNodeCollection`
 
 #### Functions
 
@@ -83,8 +94,4 @@ $l.ajax = function (options) {
 
 ###### Promises
 
-`$l.ajax` returns a Promise object that allows for chaining `then` or `catch` calls.
-
-#### Testing DomanipJS
-
-Once you have the `domanip.js` included in your script tag, you can use Chrome or Firefox developer tools and test all of the DomanipJS functions in the console.
+`$l.ajax` returns a Promise object that allows for chaining `then` or `catch` calls. This can be confirmed by fetching a random GIF in the demo page and seeing the message `"AJAX call successful."` in the developer console of Chrome or Firefox.

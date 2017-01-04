@@ -99,8 +99,6 @@
 	  });
 	};
 
-	window.$l = $l;
-
 	$l( () => {
 	  console.log("DOM content loaded!");
 	});
