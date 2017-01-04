@@ -35,7 +35,7 @@ attr(attribute, value) {
 
 ### DOM Selection
 
-The function `$l` is the selector. You can select DOM elements by their class, ids, or HTML element type. The result is a `DOMNodeCollection`
+The function `$l` is the selector. You can select DOM elements by their class, ids, or HTML element type. The result is an array of `DOMNodeCollection` objects matching the selector argument.
 
 #### Functions
 
