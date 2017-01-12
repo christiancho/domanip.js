@@ -6,7 +6,7 @@ A lightweight DOM manipulation library inspired by jQuery.
 
 ## Getting Started
 
-Download `scripts/domanip.js` and include it in your HTML files. Alternatively, download the original files `lib/dom_node_collection.js` and `lib/main.js` and use `webpack` to compile the files. The file will be successfully loaded if the console in the browser reads `DOM content loaded!`. You can remove this output on line 58 of `lib/main.js`.
+Download the original files `lib/dom_node_collection.js` and `lib/main.js` and use `webpack` to compile the files. The file will be successfully loaded if the console in the browser reads `DOM content loaded!`. You can remove this output on line 58 of `lib/main.js`.
 
 ### Loading Demo
 
