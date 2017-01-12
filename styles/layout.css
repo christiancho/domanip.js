@@ -17,21 +17,20 @@ header {
   align-items: center;
   justify-content: space-between;
   top: 0;
-  height: 100px;
+  height: 150px;
 }
 
 main {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  top: 100px;
+  justify-content: center;
+  top: 150px;
   bottom: 50px;
   overflow-y: scroll;
 }
 
 main > * {
-  margin: 20px 0px;
+  margin: 20px;
 }
 
 footer {
